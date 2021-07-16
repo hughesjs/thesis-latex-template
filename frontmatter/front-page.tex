@@ -1,0 +1,42 @@
+\author{First Last Name}
+\date{\today}
+\title{Super Impressive Title}
+
+\makeatletter
+\renewcommand{\title}[1]{\gdef\@title{#1}}
+\renewcommand{\author}[1]{\gdef\@author{#1}}
+\renewcommand{\date}[1]{\gdef\@date{#1}}
+\newcommand{\address}[1]{\gdef\@address{#1}}
+\newcommand{\degreetext}[1]{\gdef\@degreetext{#1}}
+\renewcommand{\maketitle}{
+	\thispagestyle{empty}
+	\begin{singlespace}
+	      \begin{center}
+		      {\Huge {\@title}\par}
+		      \vfill
+		      {\huge\MakeUppercase{\@author}}\\
+		      \vskip 1em
+		      {\Large{\@degreetext}}
+		      \vskip 1em
+		      {\Large{\@date}}
+		      \vfill
+		      {\Large\MakeUppercase{\@address}}
+		      \vskip 1em
+		      \copyright \@author, \@date
+		      \vskip 1em
+		      \@author\ asserts their moral right to be identified as the
+		      author of this thesis.
+		      \vskip 1em
+		      This copy of the thesis has been supplied on condition that
+		      anyone who consults it is understood to recognise that its
+		      copyright rests with its author and that no quotation from the
+		      thesis and no information derived from it may be published
+		      without appropriate permission or acknowledgement.
+	      \end{center}
+      \end{singlespace}
+}
+\makeatother
+\address{Institution}
+\degreetext{Degree}
+
+\maketitle

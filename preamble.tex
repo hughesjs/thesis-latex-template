@@ -1,0 +1,62 @@
+%! TEX root = ./dissertation.tex
+
+\documentclass[a4paper]{book}
+
+%Package Use Definitions%
+\usepackage[english]{babel}
+
+\usepackage{float}
+%\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{pgfplots}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage[title]{appendix}
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{enumerate}
+\usepackage{longtable}
+\usepackage{csvsimple}
+\usepackage[export]{adjustbox}
+\usepackage{epigraph}
+\usepackage[bibstyle = ieee, style= ieee, backend=biber]{biblatex}
+
+\usepackage[parfill]{parskip}
+\usepackage{microtype}
+\usepackage{lipsum}
+\usepackage[acronym]{glossaries}
+\usepackage{setspace}
+\usepackage{libertine}
+\usepackage[T1]{fontenc}
+\usepackage{placeins}
+\usepackage{mhchem}
+\usepackage{rotating}
+\usepackage{minted}
+\usepackage{csquotes}
+\usepackage{longtable}
+%\captionsetup{belowskip=0pt}
+
+\addbibresource{bibliography.bib}
+
+%Pgfplots compatibility setting%
+\pgfplotsset{compat=1.16}
+
+\usepgfplotslibrary{fillbetween}
+%\usepgfplotslibrary{external}
+%\tikzexternalize
+
+
+% Justify epigraphs
+\renewcommand{\textflush}{flushepinormal}
+
+\newcommand{\citationneeded}[1][]{\textsuperscript{\color{blue} [citation needed: #1]}}
+
+\newcommand{\source}[1]{\caption*{\hfill \color{gray}Source: {#1}} }
+
+\newcommand{\devrandom}{\texttt{/dev/random/ }}
+
+\renewcommand*{\bibfont}{\small} %Use small font for refs
+
